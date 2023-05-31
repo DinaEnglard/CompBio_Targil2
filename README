@@ -1,0 +1,17 @@
+New generation is created as following:
+Add elite pop from previous run.
+Then, for the rest of the population(pop_size-elite_pop_size):
+take 2 parents randomly from elite pop. 
+Crossover them: randomly select 2 indexes, and replace the letters in parent 1 between that range of indexes with parent 2 in those indexes.  
+Repair the perm so it is valid alphabet perm: check which letters are missing, shuffle them, and then place them instead of letters that appear twice. 
+Mutate: each letter has a chance to be replaced with a different random letter (random). Our mutation rate is 0.1.
+return the child
+
+Fitness Function:
+Calculate the rating of each trigram base on a rating chart.
+On shorter text, we had a problem of early convergence.
+I tried randomly creating a new population and starting from the beginning. Tried keeping the top 10 from previous run and creating a new population from the rest. In all my tries, the best one remained at the top, leaving us at the convergence. it is necessary to make the population and generation sizes much greater.
+#Add early convergence check.
+#check num of calls to fitness func.- why is it different each time? Always around 9,000. 
+Early convergence problem:
+If the best score remains the same for 40 generations, I restart from the beginning with a new population, and then take the population with the better of the two best scores for further generations (while keeping the generation count running). 
