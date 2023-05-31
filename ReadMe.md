@@ -37,7 +37,7 @@ Execting multiple Lamarck Algorithm
 
 
 ## Remarks ##
-* Additional files should be located next tot the main.py file (dict.ttx, enc.txt etc.)
-* the results will be in plain.ttx & perm.txt output files in the current directory.
+* Additional files should be located next tot the main.py file (dict.txt, enc.txt etc.)
+* the results will be in plain.txt & perm.txt output files in the current directory.
 * You may see the default parameters we chose to our algorithm in the head of main.py file
 * The algorithm is a best-effort, which means plain.txt might contains incorrect words.
