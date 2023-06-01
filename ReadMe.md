@@ -33,8 +33,6 @@ Execting multiple Lamarck Algorithm
 > python main.py lamarck -t 10
 ```
 
-![stats](doc_img/stats.png "Stats")
-
 
 ## Remarks ##
 * Additional files should be located next tot the main.py file (dict.txt, enc.txt etc.)
